@@ -1,11 +1,12 @@
 ---
 name: "Prof. Sarah Johnson"
 role: "Principal Investigator"
+title: ["Principal Investigator", "Academician of CAS", "IEEE Fellow"]
 avatar: "../../assets/avatar-sarah.jpg"
 bio: "Professor of Computer Science, focusing on Human-AI Interaction and Ethical AI."
 email: "sarah.johnson@university.edu"
 linkedin: "https://linkedin.com"
-github: "https://github.com/sarahjohnson"
+github: "https://github.com/fjd2004711"
 googleScholar: "https://scholar.google.com"
 weight: 1
 ---

@@ -26,7 +26,19 @@ const team = defineCollection({
   type: 'content',
   schema: ({ image }) => z.object({
     name: z.string(),
-    role: z.enum(['Principal Investigator', 'Professor', 'Teacher', 'Postdoc', 'Postdoctoral Researcher', 'PhD Student', 'Master Student', 'Graduate Student', 'Undergraduate', 'Former Member']),
+    role: z.enum([
+      'Principal Investigator', 
+      'Professor', 
+      'Associate Professor',
+      'Assistant Professor',
+      'Postdoc', 
+      'Research Assistant',
+      'PhD Student', 
+      'Master Student', 
+      'Undergraduate', 
+      'Alumni'
+    ]),
+    title: z.array(z.string()).optional(), // For specific academic titles like "Academician", "Changjiang Scholar"
     avatar: image(),
     bio: z.string().optional(), // Short bio for card
     email: z.string().optional(),

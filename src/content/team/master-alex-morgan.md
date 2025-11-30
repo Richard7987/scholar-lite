@@ -1,6 +1,7 @@
 ---
 name: "Alex Morgan"
 role: "Master Student"
+title: ["Master Student"]
 avatar: "../../assets/avatar-alex.jpg"
 bio: "Working on natural language processing, code generation, and human-AI interaction."
 email: "alex.morgan@university.edu"

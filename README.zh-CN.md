@@ -10,10 +10,10 @@
 **[English](./README.md) | [简体中文](./README.zh-CN.md)**
 
 <p align="center">
-  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/nxu-scholar/scholar-lite">
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/fjd2004711/scholar-lite">
     <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
   </a>
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/nxu-scholar/scholar-lite">
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/fjd2004711/scholar-lite">
     <img src="https://vercel.com/button" alt="Deploy with Vercel">
   </a>
 </p>
@@ -30,29 +30,28 @@
   <img src="./public/assets/screenshots/mobile-view.png" alt="移动端预览" height="400" style="border-radius: 16px; border: 4px solid #333;">
 </div>
 
-> 🚀 **Scholar-Lite** 是一款专为学术实验室、研究团队和学者打造的**现代化静态网站模板**。基于 Astro v4 和 Tailwind CSS 构建，旨在提供极致的性能体验和优雅的展示效果。
+> 🚀 **Scholar-Lite** 是一款专为学术实验室、研究团队和学者打造的**现代化、极速静态网站模板**。基于 **Astro v5** 和 **Tailwind CSS v4** 构建，开箱即享 **100/100 Lighthouse** 满分性能。
 
 ## ⚡ 性能优先
 
-我们极其重视性能。Scholar-Lite 基于 Astro 构建，默认向客户端发送 **0kb JavaScript**，确保秒开体验。
+Scholar-Lite 为速度而生。基于 Astro 的 "Zero JS by Default" 架构，默认向客户端发送 **0kb JavaScript**，确保在任何网络环境下都能瞬间加载。
 
 ![Lighthouse Score](./public/assets/screenshots/lighthouse-score.png)
 
-*Google Lighthouse 满分 100/100 评分。*
+*Google Lighthouse 稳定满分 100/100。*
 
 ---
 
 ## ✨ 核心亮点
 
-*   ⚡ **极致性能**：基于 [Astro](https://astro.build) 构建，默认零 JavaScript 运行时，加载速度飞快。
-*   🎨 **现代设计**：集成 [Tailwind CSS](https://tailwindcss.com)，提供清新、专业的学术风格 UI，完美适配移动端。
-*   📝 **Markdown 驱动**：无需数据库！通过 Markdown + Frontmatter 管理所有数据（论文、成员、荣誉等），像写文档一样管理网站。
-*   🛡️ **类型安全**：完全基于 TypeScript，利用 Zod 进行内容模式验证，确保数据结构无误。
-*   🌍 **多语言支持**：内置国际化（i18n）架构，轻松支持中、英等多语言切换。
-*   🖼️ **真实图片支持**：轻松配置实验室 Logo、首页大图和团队成员头像。
-*   🧩 **模块化组件**：提供论文列表、成员卡片、荣誉奖章等专用学术组件，开箱即用。
-*   🔍 **SEO 优化**：自动生成站点地图（Sitemap），不仅对用户友好，对搜索引擎也友好。
-*   📱 **移动端优化**：全响应式设计，提供现代化的移动端菜单体验。
+*   🚀 **极致性能**：默认 **0kb JavaScript** 运行时。告别加载等待，内容秒开。
+*   📱 **完美适配**：全响应式设计，在手机、平板和桌面端都能完美展示您的研究成果。
+*   🖼️ **智能图片管理**：直接上传高清原图（论文截图、团队合影），系统自动进行**压缩与 WebP 转换**，在保持画质的同时极大提升加载速度。
+*   ✍️ **Markdown 驱动**：无需数据库，无需懂代码！通过简单的 Markdown 文件即可管理论文、新闻和成员信息。
+*   🎨 **现代美学**：采用最新的 **Tailwind CSS v4**，打造清爽、专业的学术主页风格。
+*   🌐 **多语言支持**：内置国际化（i18n）架构，轻松实现中英文一键切换，连接全球学者。
+*   🔍 **SEO 友好**：预置 Meta 标签与结构化数据，助您的学术成果更容易被搜索引擎收录。
+*   🛡️ **类型安全**：完全基于 TypeScript 构建，数据结构严谨可靠。
 
 ---
 

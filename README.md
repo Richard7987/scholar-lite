@@ -30,29 +30,28 @@
   <img src="./public/assets/screenshots/mobile-view.png" alt="Mobile Preview" height="400" style="border-radius: 16px; border: 4px solid #333;">
 </div>
 
-> 🚀 **Scholar-Lite** is a **modern static website template** designed specifically for academic laboratories, research teams, and scholars. Built with Astro v5 and Tailwind CSS, it delivers extreme performance and an elegant presentation.
+> 🚀 **Scholar-Lite** is a **modern, blazing-fast static website template** tailored for academic laboratories and scholars. Built with **Astro v5** and **Tailwind CSS v4**, it delivers **100/100 Lighthouse performance** right out of the box.
 
 ## ⚡ Performance First
 
-We take performance seriously. Scholar-Lite is built on Astro to deliver **0kb JavaScript** by default to the client.
+Scholar-Lite is engineered for speed. Built on Astro's "Zero JS by Default" architecture, your site loads instantly.
 
 ![Lighthouse Score](./public/assets/screenshots/lighthouse-score.png)
 
-*Perfect 100/100 scores on Google Lighthouse.*
+*Consistent 100/100 scores on Google Lighthouse.*
 
 ---
 
-## ✨ Key Features
+## ✨ Why Scholar-Lite?
 
-*   ⚡ **Blazing Fast**: Built on [Astro](https://astro.build), shipping zero JavaScript by default for ultimate performance.
-*   🎨 **Modern Design**: Integrated with [Tailwind CSS](https://tailwindcss.com) for a clean, professional academic look that works perfectly on mobile.
-*   📝 **Markdown Powered**: No database needed! Manage all data (papers, members, honors) via Markdown + Frontmatter. It's like writing documentation.
-*   🛡️ **Type Safe**: Fully TypeScript-based with Zod schema validation to ensure your content data is always structured correctly.
-*   🌍 **i18n Ready**: Built-in internationalization architecture to easily support English, Chinese, and 8 other languages.
-*   🖼️ **Real Image Support**: Easily configure your Lab Logo, Hero Image, and Team Avatars via config files.
-*   🧩 **Modular Components**: Ready-to-use academic components like Publication Lists, Team Cards, and Honor Badges.
-*   🔍 **SEO Optimized**: Automatic sitemap generation and meta tags to help your research get found.
-*   📱 **Mobile Optimized**: Fully responsive design with a modern, app-like mobile menu experience.
+*   🚀 **Blazing Fast**: **0kb JavaScript** runtime by default. Your content loads instantly, everywhere.
+*   📱 **Mobile Perfect**: Fully responsive design that looks stunning on phones, tablets, and desktops.
+*   🖼️ **Smart Image Handling**: Just drop in your high-res photos. The system automatically optimizes, compresses, and generates responsive formats (WebP) for you.
+*   📝 **Markdown Powered**: Manage publications, news, and team members via simple Markdown files. **No coding required**.
+*   🎨 **Modern & Clean**: Professional academic aesthetic powered by the latest **Tailwind CSS v4**.
+*   🌍 **i18n Ready**: Built-in multi-language support (English/Chinese) to reach a global audience.
+*   🔍 **SEO Ready**: Optimized meta tags and structure to ensure your research gets found by search engines.
+*   🛡️ **Type Safe**: Built with TypeScript and Zod to ensure your data is always robust.
 
 ---
 

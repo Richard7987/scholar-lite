@@ -5,45 +5,87 @@ import { getCollection } from 'astro:content';
 
 const allMembers = await getCollection('team');
 
-// Define the order of roles
-const roleOrder = [
-  'Principal Investigator',
-  'Professor',
-  'Teacher',
-  'Postdoctoral Researcher',
-  'Postdoc',
-  'PhD Student',
-  'Master Student',
-  'Graduate Student',
-  'Undergraduate',
-  'Former Member'
+// Define groups based on domestic hierarchy + international standard
+const groups = [
+  {
+    id: 'pi',
+    titleKey: 'team.pi',
+    roles: ['Principal Investigator']
+  },
+  {
+    id: 'faculty',
+    titleKey: 'team.faculty',
+    roles: ['Professor', 'Associate Professor', 'Assistant Professor']
+  },
+  {
+    id: 'postdoc',
+    titleKey: 'team.youth_researcher',
+    roles: ['Postdoc']
+  },
+  {
+    id: 'staff',
+    titleKey: 'team.support',
+    roles: ['Research Assistant']
+  },
+  {
+    id: 'phd',
+    titleKey: 'team.phd',
+    roles: ['PhD Student']
+  },
+  {
+    id: 'master',
+    titleKey: 'team.master',
+    roles: ['Master Student']
+  },
+  {
+    id: 'undergrad',
+    titleKey: 'team.undergrad',
+    roles: ['Undergraduate']
+  },
+  {
+    id: 'alumni',
+    titleKey: 'team.alumni',
+    roles: ['Alumni']
+  }
 ];
 
-// Group members by role
-const groupedMembers = roleOrder.reduce((acc, role) => {
+const getRolePriority = (role: string) => {
+  const priorities: Record<string, number> = {
+    'Principal Investigator': 0,
+    'Professor': 1,
+    'Associate Professor': 2,
+    'Assistant Professor': 3,
+    'Postdoc': 4,
+    'Research Assistant': 5,
+    'PhD Student': 6,
+    'Master Student': 7,
+    'Undergraduate': 8,
+    'Alumni': 9
+  };
+  return priorities[role] ?? 99;
+};
+
+// Group members
+const groupedMembers = groups.reduce((acc, group) => {
   const members = allMembers
-    .filter(m => m.data.role === role)
-    .sort((a, b) => (a.data.weight || 100) - (b.data.weight || 100)); // Sort by weight
+    .filter(m => group.roles.includes(m.data.role))
+    .sort((a, b) => {
+      // Sort by Role Priority first (e.g. Prof before Assoc Prof)
+      const roleDiff = getRolePriority(a.data.role) - getRolePriority(b.data.role);
+      if (roleDiff !== 0) return roleDiff;
+      // Then by weight
+      return (a.data.weight || 100) - (b.data.weight || 100);
+    });
   
   if (members.length > 0) {
-    acc[role] = members;
+    acc.push({
+      ...group,
+      members
+    });
   }
   return acc;
-}, {} as Record<string, typeof allMembers>);
+}, [] as Array<{ id: string, titleKey: string, roles: string[], members: typeof allMembers }>);
 
-const presentRoles = roleOrder.filter(role => groupedMembers[role]);
-const roleToKey = {
-  'Principal Investigator': 'team.pi',
-  'Professor': 'team.professor',
-  'Teacher': 'team.teacher',
-  'Postdoctoral Researcher': 'team.postdoc_researcher',
-  'Postdoc': 'team.postdoc',
-  'PhD Student': 'team.phd',
-  'Master Student': 'team.master',
-  'Graduate Student': 'team.graduate',
-  'Undergraduate': 'team.undergrad',
-  'Former Member': 'team.former'
-};
 ---
 
 <Layout title="Team">
@@ -56,22 +98,21 @@ const roleToKey = {
     </div>
 
     <div class="space-y-20">
-      {roleOrder.map(role => groupedMembers[role] && (
+      {groupedMembers.map(group => (
         <section>
-          <h2 class="text-2xl font-bold text-gray-900 mb-8 pl-4 border-l-4 border-blue-600" data-i18n-key={roleToKey[role]}>
-            {role === 'Principal Investigator' ? 'Principal Investigator' :
-             role === 'Professor' ? 'Professors' :
-             role === 'Teacher' ? 'Faculty' :
-             role === 'Postdoctoral Researcher' ? 'Postdoctoral Researchers' :
-             role === 'Postdoc' ? 'Postdoctoral Researchers' :
-             role === 'PhD Student' ? 'PhD Students' :
-             role === 'Master Student' ? 'Master Students' :
-             role === 'Graduate Student' ? 'Graduate Students' :
-             role === 'Undergraduate' ? 'Undergraduate Students' :
-             role === 'Former Member' ? 'Alumni' : role}
+          <h2 class="text-2xl font-bold text-gray-900 mb-8 pl-4 border-l-4 border-blue-600" data-i18n-key={group.titleKey}>
+            {/* Fallback text if JS doesn't replace it immediately, though i18n script should handle it */}
+            {group.id === 'pi' ? 'Principal Investigator' :
+             group.id === 'faculty' ? 'Faculty' :
+             group.id === 'postdoc' ? 'Postdoctoral Researchers' :
+             group.id === 'staff' ? 'Research Support' :
+             group.id === 'phd' ? 'PhD Students' :
+             group.id === 'master' ? 'Master Students' :
+             group.id === 'undergrad' ? 'Undergraduate Students' :
+             group.id === 'alumni' ? 'Alumni' : ''}
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            {groupedMembers[role].map(member => (
+            {group.members.map(member => (
               <TeamCard member={member} />
             ))}
           </div>

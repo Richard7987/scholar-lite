@@ -7,7 +7,7 @@
   "author": "Scholar-Lite Team",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nxu-scholar/scholar-lite.git"
+    "url": "https://github.com/fjd2004711/scholar-lite.git"
   },
   "scripts": {
     "dev": "astro dev",

@@ -60,7 +60,7 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [
   {
-    link: 'https://github.com/nxu-scholar/scholar-lite',
+    link: 'https://github.com/fjd2004711/scholar-lite',
     active: true,
   },
 ];

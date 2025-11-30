@@ -9,18 +9,14 @@ interface Props {
 const { member } = Astro.props;
 const { name, role, avatar, bio, email, website, linkedin, github, twitter, googleScholar } = member.data;
 
-const roleToKey = {
-  'Principal Investigator': 'team.pi',
-  'Professor': 'team.professor',
-  'Teacher': 'team.teacher',
-  'Postdoctoral Researcher': 'team.postdoc_researcher',
-  'Postdoc': 'team.postdoc',
-  'PhD Student': 'team.phd',
-  'Master Student': 'team.master',
-  'Graduate Student': 'team.graduate',
-  'Undergraduate': 'team.undergrad',
-  'Former Member': 'team.former'
-};
+// Color mapping for title badges
+const badgeColors = [
+  "text-blue-700 bg-blue-50 border-blue-100",
+  "text-purple-700 bg-purple-50 border-purple-100",
+  "text-emerald-700 bg-emerald-50 border-emerald-100",
+  "text-amber-700 bg-amber-50 border-amber-100",
+  "text-rose-700 bg-rose-50 border-rose-100"
+];
 ---
 
 <div class="group flex flex-col items-center text-center">
@@ -37,7 +33,7 @@ const roleToKey = {
     
     <!-- Social Overlay (appears on hover) -->
     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px] pointer-events-none">
-      <div class="pointer-events-auto flex gap-3">
+      <div class="pointer-events-auto flex flex-wrap justify-center gap-2 px-2">
       {email && (
         <a href={`mailto:${email}`} class="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 hover:scale-110 transition-all" title="Email" aria-label="Email">
           <Mail className="w-4 h-4" />
@@ -73,9 +69,21 @@ const roleToKey = {
   </div>
 
   <!-- Info -->
-  <a href={`/team/${member.slug}`} class="hover:underline decoration-blue-600 underline-offset-2">
+  <a href={`/team/${member.slug}`} class="hover:underline decoration-blue-600 underline-offset-2 mb-2">
     <h3 class="text-lg font-semibold text-gray-900">{name}</h3>
   </a>
-  <p class="text-sm text-blue-600 font-medium mb-2" data-i18n-key={roleToKey[role]}>{role}</p>
+  
+  {member.data.title && member.data.title.length > 0 && (
+    <div class="flex flex-wrap justify-center gap-2 mb-3 px-2">
+      {member.data.title.map((t, index) => (
+        <span class={`inline-block px-2 py-0.5 text-xs font-medium border rounded-full ${badgeColors[index % badgeColors.length]}`}>
+          {t}
+        </span>
+      ))}
+    </div>
+  )}
+  
+  {/* Role display removed as per request, relying on section headers and title badges */}
+  
   {bio && <p class="text-sm text-gray-500 line-clamp-2 px-2">{bio}</p>}
 </div>
