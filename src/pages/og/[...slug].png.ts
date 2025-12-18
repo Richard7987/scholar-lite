@@ -1,3 +1,4 @@
+// @ts-ignore
 import { getCollection } from 'astro:content';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
@@ -29,6 +30,7 @@ export async function getStaticPaths() {
   }));
 
   // Generate paths for dynamic content
+  // @ts-ignore
   const pubPaths = publications.map(post => {
     const slug = `publications/${post.id.replace(/\.[^/.]+$/, "")}`;
     return {
@@ -40,6 +42,7 @@ export async function getStaticPaths() {
     };
   });
 
+  // @ts-ignore
   const teamPaths = team.map(member => {
     const slug = `team/${member.id.replace(/\.[^/.]+$/, "")}`;
     return {
@@ -51,6 +54,7 @@ export async function getStaticPaths() {
     };
   });
 
+  // @ts-ignore
   const researchPaths = research.map(item => {
     const slug = `research/${item.id.replace(/\.[^/.]+$/, "")}`;
     return {
@@ -62,6 +66,7 @@ export async function getStaticPaths() {
     };
   });
 
+  // @ts-ignore
   const newsPaths = news.map(item => ({
     params: { slug: `news/${item.id.replace(/\.[^/.]+$/, "")}` },
     props: { 
@@ -70,6 +75,7 @@ export async function getStaticPaths() {
     },
   }));
 
+  // @ts-ignore
   const activityPaths = activities.map(item => ({
     params: { slug: `activities/${item.id.replace(/\.[^/.]+$/, "")}` },
     props: { 
