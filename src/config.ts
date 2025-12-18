@@ -1,18 +1,19 @@
+// @ts-ignore
 import heroImage from './assets/hero-real.jpg';
 
 export const SITE = {
-  website: 'https://scholar-lite-demo.netlify.app/', // Replace with your actual deployed URL
-  author: 'Scholar-Lite Team',
-  description: 'A lightweight, modern static website template for academic labs and scholars.',
-  title: 'Scholar-Lite',
+  website: 'https://cerulean-valkyrie-18a2b2.netlify.app/', // Replace with your actual deployed URL
+  author: 'Sociedad de alumnos de la LiFTA',
+  description: 'Una pagian web de Fisicos para Fisicos.',
+  title: 'Licenciatura en Fisica y Tecnologia',
   ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   
   // Lab Info
-  labName: 'Scholar-Lite Lab',
-  university: 'University Name',
+  labName: 'Licenciatura en Fisica y Tecnologia',
+  university: 'Univercidad Autonoma del Estado de Hidalgo (UAEH)',
   logo: '/assets/logo-real.svg', // Logo path
   avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
   email: 'contact@lab.edu', // Contact email for Join Us page
@@ -43,14 +44,14 @@ export const SITE = {
   
   // i18n Config
   i18n: {
-    enabled: true,
+    enabled: false,
     defaultLocale: 'zh',
   }
 };
 
 export const LOCALE = {
-  lang: 'en', // html lang code. Set this empty and default will be "en"
-  langTag: ['en-EN'], // BCP 47 Language Tags. Set this empty [] to use the environment default
+  lang: 'es', // html lang code. Set this empty and default will be "en"
+  langTag: ['es-ES'], // BCP 47 Language Tags. Set this empty [] to use the environment default
 } as const;
 
 export const LOGO_IMAGE = {
