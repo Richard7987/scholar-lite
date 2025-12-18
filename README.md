@@ -7,15 +7,14 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Pagefind](https://img.shields.io/badge/Pagefind-Search-FF0000?style=for-the-badge&logo=algolia&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
-
-**[English](./README.md) | [简体中文](./README.zh-CN.md)**
+w
 
 > ## **⚡ Create your site in 30 seconds**
 > ```bash
 > npm create astro@latest -- --template fjd2004711/scholar-lite
 > ```
 
-<p align="center">
+<p >
   <a href="https://app.netlify.com/start/deploy?repository=https://github.com/fjd2004711/scholar-lite" target="_blank">
     <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
   </a>
@@ -62,7 +61,7 @@
 
 <div align="center">
   <img src="public/assets/screenshots/home-desktop-mockup.png" width="70%" alt="Desktop View" />
-  <img src="public/assets/screenshots/mobile-view-mockup.png" width="25%" alt="Mobile View" />
+  <img src="public/assets/screenshots/mobile-view-mockup.png" width="441" alt="Mobile View" />
 </div>
 
 </div>
