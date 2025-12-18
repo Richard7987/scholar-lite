@@ -13,7 +13,7 @@ export const SITE = {
   
   // Lab Info
   labName: 'Licenciatura en Fisica y Tecnologia',
-  university: '(UAEH)',
+  university: 'r(UAEH)',
   logo: '/assets/logo-real.svg', // Logo path
   avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
   email: 'contact@lab.edu', // Contact email for Join Us page
