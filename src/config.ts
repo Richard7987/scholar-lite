@@ -13,15 +13,15 @@ export const SITE = {
   
   // Lab Info
   labName: 'Licenciatura en Fisica y Tecnologia',
-  university: 'r(UAEH)',
+  university: '(UAEH)',
   logo: '/assets/logo-real.svg', // Logo path
   avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
   email: 'contact@lab.edu', // Contact email for Join Us page
 
   // Hero Section (Home Page) - Main content does not need to be translated for 8 languages by default
   hero: {
-    title: 'Advancing Computer Vision & Deep Learning Research.',
-    subtitle: 'We are the Scholar-Lite Lab.',
+    title: 'Licenciatura en Fisica y Tecnologia.',
+    subtitle: 'Univercidad Autonoma del Estado de Hidalgo.',
     action: 'View Publications', // Optional call to action text
     image: heroImage, // Hero image path
   },
@@ -45,7 +45,7 @@ export const SITE = {
   // i18n Config
   i18n: {
     enabled: false,
-    defaultLocale: 'zh',
+    defaultLocale: 'es',
   }
 };
 
@@ -69,4 +69,4 @@ export const SOCIALS = [
 ];
 
 // Default language configuration
-export const DEFAULT_LANG: 'zh' | 'en' | 'ja' | 'ko' | 'fr' | 'de' | 'es' | 'ru' = 'en'; 
+export const DEFAULT_LANG: 'ru' = 'es';
