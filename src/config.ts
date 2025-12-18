@@ -4,7 +4,7 @@ import heroImage from './assets/hero-real.jpg';
 export const SITE = {
   website: 'https://cerulean-valkyrie-18a2b2.netlify.app/', // Replace with your actual deployed URL
   author: 'Sociedad de alumnos de la LiFTA',
-  description: 'Una pagian web de Fisicos para Fisicos.',
+  description: 'Una pagina web de Fisicos para Fisicos.',
   title: 'Licenciatura en Fisica y Tecnologia',
   ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
