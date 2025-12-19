@@ -1,76 +1,207 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Mail, GraduationCap, BookOpen, Code } from 'lucide-react';
+import { Mail, BookOpen, Briefcase, Users, Target, GraduationCap } from 'lucide-react';
 import { SITE } from '../config';
 ---
 
-<Layout title="Join Us">
+
+<Layout title="Licenciatura en Física y Tecnología Avanzada">
   <div class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
+    <!-- Sección de Bienvenida -->
     <div class="text-center mb-16">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4" data-i18n-key="join.title">Join Us</h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n-key="join.subtitle">
-        We are always looking for motivated students to join our team. If you are interested in our research areas, please contact us!
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Licenciatura en Física y Tecnología Avanzada</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+        Explora la frontera del conocimiento en física de partículas, astrofísica, gravitación y materia condensada. Adquiere herramientas matemáticas, computacionales y tecnológicas para abordar los desafíos del siglo XXI.
       </p>
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-3 mb-16">
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-blue-600">
-          <GraduationCap className="w-6 h-6" />
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">PhD Students</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          We are looking for PhD students with strong mathematical background and coding skills.
-        </p>
-        <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
-          <li>Strong math foundation</li>
-          <li>Proficient in Python/C++</li>
-          <li>Publication record is a plus</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 text-green-600">
-          <BookOpen className="w-6 h-6" />
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Master Students</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Self-motivated master students who want to dive deep into research are welcome.
-        </p>
-        <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
-          <li>Passion for research</li>
-          <li>Good programming skills</li>
-          <li>Commitment to projects</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 text-purple-600">
-          <Code className="w-6 h-6" />
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Undergraduates</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Talented undergraduates can join us for research training and internship.
-        </p>
-        <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
-          <li>Curiosity driven</li>
-          <li>Fast learner</li>
-          <li>Team player</li>
-        </ul>
+      <div class="inline-block bg-blue-50 px-4 py-2 rounded-full">
+        <p class="text-sm font-semibold text-blue-700">Área del Conocimiento: Ciencias Naturales</p>
       </div>
     </div>
 
-    <div class="bg-gray-50 rounded-3xl p-8 sm:p-12 text-center">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n-key="join.howToApply">How to Apply</h2>
-      <p class="text-gray-600 mb-8 max-w-2xl mx-auto" data-i18n-key="join.applicationText">
-        Please send your CV, transcripts, and a brief statement of research interests to our Principal Investigator. 
-        Make sure to include "[Application]" in your email subject.
+    <!-- Sección de Presentación -->
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 sm:p-12 mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">¿Por qué estudiar Física en la UAEH?</h2>
+      <p class="text-gray-700 mb-4">
+        Si te apasiona la naturaleza y siempre te has preguntado cómo funciona el universo, la física es la ciencia perfecta para ti. En nuestro programa educativo podrás:
       </p>
-      
-      <a href={`mailto:${SITE.email}`} class="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
-        <Mail className="w-5 h-5" />
-        <span data-i18n-key="join.sendEmail">Send Email</span>
-      </a>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold mt-1">✓</span>
+          <span>Explorar áreas como astrofísica, física biomédica, ciencia climática y creación de nuevos materiales</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold mt-1">✓</span>
+          <span>Desarrollar herramientas matemáticas, computacionales y tecnológicas avanzadas</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold mt-1">✓</span>
+          <span>Participar en proyectos de investigación de nivel internacional</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sección de Perfiles -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Perfiles de Ingreso y Egreso</h2>
+
+      <div class="grid gap-8 md:grid-cols-2 mb-8">
+        <!-- Perfil de Ingreso -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 text-green-600">
+            <Target className="w-6 h-6" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Perfil de Ingreso</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Para ingresar a nuestro programa necesitas:
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+            <li>Conocimientos en física (mecánica, electromagnetismo, termodinámica)</li>
+            <li>Sólida preparación en matemáticas</li>
+            <li>Habilidad para buscar e interpretar información</li>
+            <li>Pensamiento crítico desarrollado</li>
+            <li>Gran interés en la naturaleza, ciencia y tecnología</li>
+          </ul>
+        </div>
+
+        <!-- Perfil de Egreso -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 text-purple-600">
+            <GraduationCap className="w-6 h-6" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Perfil de Egreso</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Al graduarte serás capaz de:
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+            <li>Generar y aplicar nueva tecnología</li>
+            <li>Resolver problemas de ciencia básica</li>
+            <li>Incorporarte a posgrados o sector productivo</li>
+            <li>Elaborar modelos físicos avanzados</li>
+            <li>Dominar técnicas experimentales y computacionales</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Oportunidades Profesionales -->
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Campo Laboral y Oportunidades</h2>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-blue-600">
+            <Briefcase className="w-6 h-6" />
+          </div>y
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Investigación y Desarrollo</h3>
+          <p class="text-gray-600 text-sm">
+            Proyectos en tecnología de materiales, física de partículas, nanotecnología y astrofísica.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 text-indigo-600">
+            <BookOpen className="w-6 h-6" />
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Sector Productivo</h3>
+          <p class="text-gray-600 text-sm">
+            Empresas de energía, electrónica, informática, telecomunicaciones, aeronáutica y automotriz.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 text-amber-600">
+            <Users className="w-6 h-6" />
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Docencia</h3>
+          <p class="text-gray-600 text-sm">
+            Instituciones educativas de nivel media superior y superior, impartiendo cursos especializados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h3 class="text-lg font-bold text-gray-900 mb-3">Investigación y Desarrollo</h3>
+          <p class="text-gray-600 text-sm">
+            Proyectos en tecnología de materiales, física de partículas, nanotecnología y astrofísica.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 text-indigo-600">
+            <BookOpen className="w-6 h-6" />
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Sector Productivo</h3>
+          <p class="text-gray-600 text-sm">
+            Empresas de energía, electrónica, informática, telecomunicaciones, aeronáutica y automotriz.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 text-amber-600">
+            <Users className="w-6 h-6" />
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">Docencia</h3>
+          <p class="text-gray-600 text-sm">
+            Instituciones educativas de nivel media superior y superior, impartiendo cursos especializados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <-- Sección de Contacto e Información -->
+    <div class="bg-gray-50 rounded-3xl p-8 sm:p-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">¿Interesado en estudiar con nosotros?</h2>
+
+      <div class="grid gap-8 md:grid-cols-2 mb-8">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">Información de Contacto</h3>
+          <p class="text-gray-600 mb-2">
+            <span class="font-semibold">Universidad Autónoma del Estado de Hidalgo</span>
+          </p>
+          <p class="text-gray-600 mb-2">
+            Torres de Rectoría Pachuca-Actopan Km. 4.5<br />
+            Colonia Campo de Tiro<br />
+            Pachuca de Soto, Hidalgo, C.P. 42039
+          </p>
+          <p class="text-gray-600 mb-4">
+            <span class="font-semibold">Teléfono:</span> +52 (771) 7172000
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">Instituto de Ciencias Básicas e Ingeniería</h3>
+          <p class="text-gray-600 mb-4">
+            Nuestro programa está adscrito al Instituto de Ciencias Básicas e Ingeniería (ICBI), una dependencia dedicada a la excelencia académica y la investigación de calidad.
+          </p>
+          <p class="text-gray-600">
+            Para más información sobre requisitos de admisión y proceso de inscripción, te invitamos a visitar nuestro sitio web oficial.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`mailto:${SITE.email}`} class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+          <Mail className="w-5 h-5" />
+          <span>Enviar Consulta</span>
+        </a>
+        <a href="https://uaeh.edu.mx/campus/icbi/licenciatura/fisica-tecnologia-avanzada/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-gray-200 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-300 transition-colors">
+          <BookOpen className="w-5 h-5" />
+          <span>Sitio Oficial</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Casos de Éxito -->
+    <div class="mt-16 pt-16 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Casos de Éxito</h2>
+      <div class="bg-white p-8 rounded-2xl border border-gray-100">
+        <p class="text-gray-600 mb-4">
+          Nuestros egresados destacan por su excelencia académica y contribuciones a la ciencia. Muchos de ellos han obtenido becas internacionales prestigiosas como Fulbright-García Robles y han participado en investigaciones de nivel mundial en instituciones como Jefferson Lab en Virginia, Estados Unidos.
+        </p>
+        <p class="text-gray-600">
+          Si deseas conocer más historias de éxito de nuestros estudiantes y egresados, te invitamos a explorar la sección de casos de éxito en nuestro sitio oficial.
+        </p>
+      </div>
     </div>
   </div>
 </Layout>
