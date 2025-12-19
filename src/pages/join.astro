@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Mail, BookOpen, Briefcase, Users, Target, GraduationCap } from 'lucide-react';
 import { SITE } from '../config';
+const SUPPORT_EMAIL = "convocatoria_dudas@uaeh.edu.mx";
 ---
 
 
@@ -152,7 +153,7 @@ import { SITE } from '../config';
       </div>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={`mailto:convocatoria_dudas@uaeh.edu.mx`} class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+        <a href={`mailto:${SUPPORT_EMAIL}`} class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
           <Mail className="w-5 h-5" />
           <span>Enviar Consulta</span>
         </a>
